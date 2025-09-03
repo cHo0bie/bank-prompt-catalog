@@ -4,15 +4,17 @@
 {{ style }}
 
 ЗАДАЧА: Сформируй вежливый ответ на жалобу, классифицируй её и укажи, нужна ли эскалация.
+ВЫБЕРИ РОВНО **ОДНУ** категорию из списка: fraud, card, transfer, service, other.
+Возвращай только одно значение (например: "fraud"). НЕ объединяй через | и не возвращай массив.
 
 ЖАЛОБА:
 """
 {{ complaint }}
 """
 
-ФОРМАТ (строгий JSON):
+ФОРМАТ (строгий JSON, без markdown-тегов, только двойные кавычки):
 {
-  "category": "fraud|card|transfer|service|other",
+  "category": "fraud|card|transfer|service|other (выбери ОДНО значение)",
   "escalation_needed": true,
   "response_text": "текст ответа клиенту (3–6 предложений)",
   "ticket_tags": ["complaint", "priority:medium"]
