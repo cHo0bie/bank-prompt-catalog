@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "recipient_name",
+    "inn",
+    "account",
+    "bank_name",
+    "bik",
+    "correspondent_account",
+    "comment"
+  ],
+  "properties": {
+    "recipient_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inn": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kpp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bank_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bik": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "correspondent_account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "found",
+    "status",
+    "amount",
+    "currency",
+    "timestamp",
+    "advice"
+  ],
+  "properties": {
+    "found": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed",
+        "rejected",
+        "unknown"
+      ]
+    },
+    "amount": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "advice": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

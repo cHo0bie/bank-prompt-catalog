@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "category",
+    "escalation_needed",
+    "response_text",
+    "ticket_tags"
+  ],
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "fraud",
+        "card",
+        "transfer",
+        "service",
+        "other"
+      ]
+    },
+    "escalation_needed": {
+      "type": "boolean"
+    },
+    "response_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ticket_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

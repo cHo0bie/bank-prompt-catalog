@@ -1,0 +1,20 @@
+{{ system }}
+{{ policies }}
+СТИЛЬ:
+{{ style }}
+
+ЗАДАЧА: Сформируй вежливый ответ на жалобу, классифицируй её и укажи, нужна ли эскалация.
+
+ЖАЛОБА:
+"""
+{{ complaint }}
+"""
+
+ФОРМАТ (строгий JSON):
+{
+  "category": "fraud|card|transfer|service|other",
+  "escalation_needed": true,
+  "response_text": "текст ответа клиенту (3–6 предложений)",
+  "ticket_tags": ["complaint", "priority:medium"]
+}
+Только JSON!
