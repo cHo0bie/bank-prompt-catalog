@@ -21,7 +21,7 @@ def run(prompt_path, schema_path, **kwargs):
     st.code(prompt, language="markdown")
     with st.spinner("Запрос к LLM..."):
         raw = provider.chat([{"role":"system","content":system},{"role":"user","content":prompt}], temperature=0.2, max_tokens=800)
-    st.subheader("Сырый ответ") 
+    st.subheader("сырой ответ") 
     st.code(raw, language="json")
     schema = json.loads(load(schema_path))
     data, err = ensure_valid(raw, schema)
